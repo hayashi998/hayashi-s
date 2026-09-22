@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#087b9c"><title>钓钓乐 · 虎扑 Demo</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<main class="game-shell">
+  <header><div class="brand"><span class="brand-icon">钓</span><div><h1>钓钓乐</h1><p>HUPU · SUMMER FISHING</p></div></div><div class="header-actions"><span class="demo-badge">体验版</span><button id="rules" class="circle" aria-label="游戏规则">?</button></div></header>
+  <section class="scene" aria-label="钓鱼场景">
+    <div class="sun"></div><div class="cloud cloud-one"></div><div class="cloud cloud-two"></div>
+    <div class="island island-back"></div><div class="island island-front"></div>
+    <div class="scene-caption"><span>把好运，钓上来。</span><small>一竿入海 · 好运满载</small></div>
+    <div class="boat"><span class="fisher">🧑‍🌾</span><div class="rod"></div><div class="hull"></div></div>
+    <div class="water"><div class="light-beam"></div><div class="fishes" id="fishes"></div><div class="seabed"><span>🪸</span><span>🌿</span><span>🪸</span></div></div>
+    <div class="fishing-line"><span>🪝</span></div>
+    <div class="round-label">第 <span id="round">001</span> 场 <i></i> 欢乐海湾</div>
+    <div class="phase-panel"><div><span class="live-dot"></span><b id="phase-title">自由下注中</b><p id="phase-note">选择下方鱼种，等待好运上钩</p></div><div class="clock"><strong id="seconds">20</strong><small>秒</small></div><div class="progress"><i id="progress"></i></div></div>
+    <div id="result" class="result-card" hidden aria-live="polite"></div>
+  </section>
+  <section class="history-bar"><span>最近开奖</span><div id="history"><small>第一竿好运，等你开启</small></div><span class="history-arrow">‹</span></section>
+  <section class="play-area"><div class="section-title"><h2>选鱼接好运 <span>每局开出 1 种鱼</span></h2><span id="total">本局投入 0</span></div><div id="fish-grid" class="fish-grid"></div><p class="bet-hint" id="hint">点鱼种加注 · 点「撤回」退回该鱼全部投入</p></section>
+  <footer><div class="wallet"><div><span class="pearl">◉</span><span><small>我的珍珠</small><strong id="balance">10,000</strong></span></div><button id="recharge">＋ 补充珍珠</button></div><div class="chip-row"><span>投入<br>档位</span><button class="chip selected" data-chip="100"><i>◉</i>100</button><button class="chip" data-chip="1000"><i>◉</i>1,000</button><button class="chip" data-chip="10000"><i>◉</i>10,000</button></div><p class="demo-note">演示资产 · 不涉及真实支付 · 刷新后重置</p></footer>
+</main>
+<div class="desktop-note">HUPU LAB / 01 <span>钓一份闲暇，等一份好运</span></div>
+<dialog id="modal"><button class="close" aria-label="关闭">×</button><div id="modal-content"></div></dialog><div id="toast" role="status"></div>
+<script type="module" src="app.mjs"></script>
+</body></html>
